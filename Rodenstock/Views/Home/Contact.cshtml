@@ -1,17 +1,44 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="cus-contact-page">
+    <div class="cus-form-outer">
+        <h2 class="cus-heading"><strong>Contact Us</strong></h2>
+        <div>
+            <form method="post" id="customcontact" onsubmit="return validate()" runat="server">
+                <p class="cus-tagline"><h3>Please fill out the form below to contact us.</h3></p>
+                <br />
+                <div class="form-group">
+                    <input id="name" type="text" placeholder="Name" style="width: 300px;"/>
+                </div>
+                <div class="form-group">
+                    <input id="phone" type="text" placeholder="Phone Number" style="width: 300px;"/>
+                </div>
+                <div class="form-group">
+                    <input id="email" type="text" placeholder="Email Address" style="width: 300px;"/>
+                </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+                <div class="form-group">
+                    <input id="subject" type="text" placeholder="Subject" style="width: 300px;"/>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="4" cols="30" placeholder="Message"></textarea>
+                </div>
+                <div class="form-groupclearfix">
+                    <input id="klik" type="submit" value="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
 
+</div>
+
+<div>
+    <br />
 <address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    <strong>Location:</strong> Ignjat Atanasovski Vero no. 1<br />
+    7000 Bitola, Republic of Macedonia<br /><br />
+    <abbr title="Phone"><strong>Contact number:</strong> </abbr>
+    076 406 506
 </address>
+</div>
