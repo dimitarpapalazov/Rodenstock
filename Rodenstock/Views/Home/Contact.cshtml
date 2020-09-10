@@ -1,31 +1,55 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
+<style>
+    .mid {
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #contact {
+        text-align:center;
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+</style>
 <div class="cus-contact-page">
     <div class="cus-form-outer">
-        <h2 class="cus-heading"><strong>Contact Us</strong></h2>
-        <div>
+        <h1 class="cus-heading" id="contact"><strong>Contact Us</strong></h1>
+        <address class="mid">
+            <h3><strong>Location:</strong></h3> Ignjat Atanasovski Vero no. 1<br />
+            7000 Bitola, Republic of Macedonia<br /><br />
+            <h3><strong>Contact number:</strong></h3>
+            +389 76 40 65 06
+        </address>
+        <div class="mid">
             <form method="post" id="customcontact" onsubmit="return validate()" runat="server">
                 <p class="cus-tagline"><h3>Please fill out the form below to contact us.</h3></p>
                 <br />
                 <div class="form-group">
-                    <input id="name" type="text" placeholder="Name" style="width: 300px;"/>
+                    <p>Name and Surname:</p>
+                    <input id="name" type="text" placeholder="Name" style="width: 300px;" />
                 </div>
                 <div class="form-group">
-                    <input id="phone" type="text" placeholder="Phone Number" style="width: 300px;"/>
+                    <p>Phone number:</p>
+                    <input id="phone" type="text" placeholder="Phone Number" style="width: 300px;" />
                 </div>
                 <div class="form-group">
-                    <input id="email" type="text" placeholder="Email Address" style="width: 300px;"/>
+                    <p>Email:</p>
+                    <input id="email" type="text" placeholder="Email Address" style="width: 300px;" />
                 </div>
 
                 <div class="form-group">
-                    <input id="subject" type="text" placeholder="Subject" style="width: 300px;"/>
+                    <p>Subject:</p>
+                    <input id="subject" type="text" placeholder="Subject" style="width: 300px;" />
                 </div>
                 <div class="form-group">
-                    <textarea id="message" rows="4" cols="30" placeholder="Message"></textarea>
+                    <p>Message:</p>
+                    <textarea id="message" rows="4" cols="50" placeholder="Message"></textarea>
                 </div>
                 <div class="form-groupclearfix">
-                    <input id="klik" type="submit" value="submit" />
+                    <input id="klik" type="submit" value="Submit" />
                 </div>
             </form>
         </div>
@@ -35,10 +59,5 @@
 
 <div>
     <br />
-<address>
-    <strong>Location:</strong> Ignjat Atanasovski Vero no. 1<br />
-    7000 Bitola, Republic of Macedonia<br /><br />
-    <abbr title="Phone"><strong>Contact number:</strong> </abbr>
-    076 406 506
-</address>
+
 </div>
