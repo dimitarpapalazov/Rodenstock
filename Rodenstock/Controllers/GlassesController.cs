@@ -10,17 +10,20 @@ using Rodenstock.Models;
 
 namespace Rodenstock.Controllers
 {
+    [Authorize(Roles ="Administrator,Employee")]
     public class GlassesController : Controller
     {
         private GlassesContext db = new GlassesContext();
 
         // GET: Glasses
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Glasses.ToList());
         }
 
         // GET: Glasses/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
