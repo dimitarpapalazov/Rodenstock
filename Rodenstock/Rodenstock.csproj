@@ -183,6 +183,10 @@
     <Compile Include="Migrations\202009111625155_glassesOnly.designer.cs">
       <DependentUpon>202009111625155_glassesOnly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009111647218_test.cs" />
+    <Compile Include="Migrations\202009111647218_test.designer.cs">
+      <DependentUpon>202009111647218_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Glasses.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009111625155_glassesOnly.resx">
       <DependentUpon>202009111625155_glassesOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009111647218_test.resx">
+      <DependentUpon>202009111647218_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
