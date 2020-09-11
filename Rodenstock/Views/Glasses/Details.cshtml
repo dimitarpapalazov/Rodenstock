@@ -47,15 +47,17 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Price)
+            @Html.DisplayFor(model => model.Price) ден.
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ImageUrl)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ImageUrl)
+            @{ 
+                var url = Model.ImageUrl;
+            }
+            <img src="@Url.Content(url)" style="width: auto; height: 200px;" />
         </dd>
 
     </dl>
