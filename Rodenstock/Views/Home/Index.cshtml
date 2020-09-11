@@ -7,9 +7,9 @@
         display: flex;
         justify-content: center;
         border-radius: 30px;
-        height: 60px;
         color: #333333;
         margin-top: 50px;
+        margin-bottom: 100px;
         background-color: whitesmoke;
         border: solid 1px lightgray;
     }
@@ -17,5 +17,7 @@
 <div style="margin: 0 auto; width: 500px; text-align:center;">
     <h1 style="margin-top: 80px;">Welcome to our online store!</h1>
     <img src="~/Images/see better look perfect.jpg" style="margin-top: 50px;" />
-    <a id="button" href="#" ><h2 style="display: block;">Browse for your new glasses</h2></a>
+    <a id="button" href='@Url.Action("Index", "Glasses")'>
+        <h2 style="display: block;">Browse for your new glasses</h2>
+    </a>
 </div>

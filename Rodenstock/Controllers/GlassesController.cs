@@ -90,24 +90,7 @@ namespace Rodenstock.Controllers
         }
 
         // GET: Glasses/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Glasses glasses = db.Glasses.Find(id);
-            if (glasses == null)
-            {
-                return HttpNotFound();
-            }
-            return View(glasses);
-        }
-
-        // POST: Glasses/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult Delete(int id)
         {
             Glasses glasses = db.Glasses.Find(id);
             db.Glasses.Remove(glasses);
