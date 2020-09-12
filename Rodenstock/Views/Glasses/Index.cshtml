@@ -58,7 +58,7 @@
                     <img src="@Url.Content(item.ImageUrl)" style="width: auto; height: 200px;" />
                 </td>
                 <td>
-                    @if ( User.IsInRole("Employee") || User.IsInRole("Administrator"))
+                    @if (User.IsInRole("Employee") || User.IsInRole("Administrator"))
                     {
                         @Html.ActionLink("Edit", "Edit", new { id = item.Id })
                     }
@@ -67,6 +67,9 @@
                     {
                         <a class="btn-link js-delete" data-glasses-id="@item.Id">Delete</a>
                     }
+                    <a href="@Url.Action("Add", "Cart", item)">
+                        Add To Cart
+                    </a>
                 </td>
             </tr>
         }

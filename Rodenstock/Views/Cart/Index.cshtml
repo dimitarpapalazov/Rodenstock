@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Rodenstock.Models.Glasses>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    #container {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+</style>
+<div id="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Brand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Color)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Material)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sex)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageUrl)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Color)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Material)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sex)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImageUrl)
+                        </td>
+                        <td>
+                            <a href="@Url.Action("DeleteConfirmed", "Cart", item)" class="btn-link js-delete" data-glasses-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+</div>
+@section scripts {
+    <script>
+
+        $(document).ready(function () {
+            var table = $(".table").DataTable();
+        });
+
+    </script>
+}
