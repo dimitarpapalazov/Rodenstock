@@ -61,6 +61,28 @@ namespace Rodenstock.Controllers
             return View();
         }
 
+        public ActionResult AddUserToRole()
+        {
+            var model = new AddToRole();
+            model.Roles.Add("Administrator");
+            model.Roles.Add("Employee");
+            model.Roles.Add("Client");
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult AddUserToRole(AddToRole model)
+        {
+            try {
+                var user = UserManager.FindByEmail(model.Email);
+                UserManager.AddToRole(user.Id, model.Role);
+                return RedirectToAction("Index", "Home");
+            }
+            catch(Exception e)
+            {
+                return HttpNotFound();
+            }
+        }
+
         //
         // POST: /Account/Login
         [HttpPost]
