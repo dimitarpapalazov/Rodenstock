@@ -55,7 +55,7 @@
                             @Html.DisplayFor(modelItem => item.Price)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.ImageUrl)
+                            <img src="@Url.Content(item.ImageUrl)" style="width: auto; height: 200px;" />
                         </td>
                         <td>
                             <a href="@Url.Action("DeleteConfirmed", "Cart", item)" class="btn-link js-delete" data-glasses-id="@item.Id">Delete</a>
